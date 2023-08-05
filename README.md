@@ -5,6 +5,10 @@
 
 This project demonstrates a NFT marketplace for whitelisted users to claim their NFTs.
 
+NOTE: Inorder to whitelist during presale period, you need to be whitelisted🤝
+Get yourself whitelisted <a href="https://whitelist-warden.vercel.app/">here</a> Or check repo <a href="https://github.com/VishnuKMi/WhitelistWarden">repo</a>
+
+
 Try running some of the following tasks:
 
 ```shell
