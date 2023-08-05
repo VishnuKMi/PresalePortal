@@ -1,8 +1,4 @@
-export const WHITELIST_CONTRACT_ADDRESS =
-  '0xAC1b16220aB97E8C678556E9de38179006Ec832c'
-export const METADATA_URL = 'https://nft-collection-tutorial.vercel.app/api/'
-
-export const NFT_CONTRACT_ADDRESS = '0xeD8D756c0F2ECC0E7adB864C2082549924C64B5C'
+export const NFT_CONTRACT_ADDRESS = '0x4Cb6109305F8b869949248f5eA3908EBaC8f1dEE'
 export const NFT_CONTRACT_ABI = [
   {
     inputs: [

@@ -1,6 +1,7 @@
 import Web3Modal from 'web3modal'
 import { Contract, providers, utils } from 'ethers'
 import Head from 'next/head'
+import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 import { NFT_CONTRACT_ABI, NFT_CONTRACT_ADDRESS } from '../../constants/index'
 import styles from '../styles/Home.module.css'
@@ -38,8 +39,8 @@ export default function Home () {
       // call the presaleMint from the contract, only whitelisted addresses would be able to mint
       const tx = await nftContract.presaleMint({
         // value signifies the cost of one crypto dev which is "0.01" eth.
-        // We are parsing `0.01` string to ether using the utils library from ethers.js
-        value: utils.parseEther('0.0001')
+        // We are parsing `0.001` string to ether using the utils library from ethers.js
+        value: utils.parseEther('0.001')
       })
       setLoading(true)
       // wait for the transaction to get mined
@@ -261,9 +262,9 @@ export default function Home () {
 
     // If user is not connected to the Goerli network, let them know and throw an error
     const { chainId } = await web3Provider.getNetwork()
-    if (chainId !== 5) {
-      window.alert('Change the network to Goerli')
-      throw new Error('Change network to Goerli')
+    if (chainId !== 11155111) {
+      window.alert('Change the network to Sepolia')
+      throw new Error('Change network to Sepolia')
     }
 
     if (needSigner) {
@@ -282,7 +283,7 @@ export default function Home () {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
       web3ModalRef.current = new Web3Modal({
-        network: 'goerli',
+        network: 'sepolia',
         providerOptions: {},
         disableInjectedProvider: false
       })
@@ -394,7 +395,13 @@ export default function Home () {
           {renderButton()}
         </div>
         <div>
-          <img className={styles.image} src='./0.svg' />
+          <Image
+            alt='logo'
+            className={styles.image}
+            src='/cryptodevs/0.png'
+            width={500}
+            height={500}
+          />
         </div>
       </div>
 
