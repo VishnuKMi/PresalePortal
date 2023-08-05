@@ -4,10 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-coverage
-coverage.json
-typechain
-typechain-types
 
 # Hardhat files
 cache
@@ -15,6 +11,9 @@ artifacts
 
 # testing
 /coverage
+coverage.json
+typechain
+typechain-types
 
 # next.js
 /.next/
